@@ -8381,10 +8381,11 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important; } }
 
-.main {
-  background-color: pink;
-  background-image: url(../img/fondo10.jpg);
-  background-size: 100%; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100%; }
 
 .header {
   display: grid;
@@ -8394,13 +8395,15 @@ textarea.form-control-lg {
 
 body {
   background-image: url(../img/fondo10.jpg);
-  width: 55rem; }
-  @media (min-width: 992px) {
-    body {
-      width: 100%; } }
+  max-width: 100% !important;
+  overflow-x: hidden !important; }
 
 #navbar {
   background-color: pink; }
+
+.accordion-button {
+  color: black !important;
+  background-color: pink !important; }
 
 .luna {
   display: grid;
@@ -8412,183 +8415,114 @@ body {
       .luna img {
         position: relative; } }
   .luna h1, .luna .h1 {
-    color: white;
     text-align: center;
     margin-top: 3rem;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 3rem; }
+    font-size: 3rem;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    color: white; }
 
 .slide {
-  margin-top: 0px; }
+  margin-top: 0px;
+  align-items: center;
+  align-content: center;
+  text-align: center; }
   .slide img {
-    height: 110vh; }
+    height: 70%; }
+    @media (max-width: 992px) {
+      .slide img {
+        width: 100%; } }
 
 .baner_ig {
   height: 45rem;
   width: 100%;
   padding-bottom: 30px; }
+  @media (max-width: 850px) {
+    .baner_ig {
+      height: 100%; } }
 
-.baner_ig_cuadro {
+.baner {
   position: absolute;
   background-color: white;
   color: black;
   text-align: center;
   width: 100%;
   margin-top: 16rem;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   padding: 30px; }
   @media (max-width: 850px) {
-    .baner_ig_cuadro {
-      position: relative; } }
-  .baner_ig_cuadro a {
+    .baner {
+      position: relative;
+      margin-top: 2rem; } }
+  .baner a {
     text-decoration: none;
     font-size: 30px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
     color: pink;
     background-color: black;
     padding: 8px; }
 
-.box_novedades {
+.novedades {
+  width: 100%;
+  border: white 3px solid;
+  font-size: 20px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: white; }
+
+.novedades--box {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 55rem;
   height: 100%;
   background: linear-gradient(0deg, black 0%, #7d3f49 83%);
-  color: white;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   padding-top: 30px; }
   @media (min-width: 992px) {
-    .box_novedades {
+    .novedades--box {
       text-align: center;
-      padding-top: 10px;
-      width: auto; } }
+      padding-top: 10px; } }
 
 .controls {
-  width: 400px;
+  width: 100%;
   background-color: pink;
   padding: 30px;
   margin-top: 30px;
   margin-bottom: 30px;
   border: 3px solid black; }
 
-.preguntas_frec {
-  color: black;
-  text-align: center;
-  background-color: pink; }
-  @media (min-width: 992px) {
-    .preguntas_frec {
-      grid-area: preguntas_frec; } }
-
-.a_blanco {
-  color: black;
-  background-color: pink;
-  padding: 5px; }
-  @media (min-width: 992px) {
-    .a_blanco {
-      grid-area: a_blanco; }
-      .a_blanco ul {
-        grid-area: a_blanco_ul; } }
-
-.medida {
-  color: black;
-  background-color: pink;
-  padding: 5px; }
-  @media (min-width: 992px) {
-    .medida {
-      grid-area: medidas; }
-      .medida ul {
-        grid-area: medidas_ul; } }
-
-.llegar_pedido {
-  color: black;
-  background-color: pink;
-  padding: 5px; }
-  @media (min-width: 992px) {
-    .llegar_pedido {
-      grid-area: llegar_pedido; }
-      .llegar_pedido p {
-        grid-area: llegar_pedido_p; } }
-
-.plazo_cambio {
-  color: black;
-  background-color: pink;
-  padding: 5px; }
-  @media (min-width: 992px) {
-    .plazo_cambio {
-      grid-area: plazo; }
-      .plazo_cambio ul {
-        grid-area: plazo_ul; } }
-
-.preg {
-  background: linear-gradient(0deg, black 36%, #7d3f49 72%);
-  color: white;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  display: flex;
-  width: 55rem;
-  flex-direction: column;
-  gap: 15px 10px;
-  justify-items: center;
-  align-items: center;
-  padding: 30px; }
-  @media (min-width: 992px) {
-    .preg {
-      display: grid;
-      grid-template-areas: "preguntas_frec a_blanco medidas" "preguntas_frec a_blanco_ul medidas_" "preguntas_frec llegar_pedido plazo " "preguntas_frec llegar_pedido_p plazo_ul";
-      grid-template-columns: 20% auto auto;
-      grid-template-rows: 40px auto auto auto;
-      gap: 15px 10px;
-      justify-items: center;
-      align-items: center;
-      width: auto; } }
-
-.como_comprar {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  width: 55rem;
-  color: white;
-  font-size: 20px;
+.novedades--comprar {
   background: linear-gradient(0deg, #7d3f49 0%, black 46%);
   padding: 40px 40px 40px 40px;
-  text-align: center;
-  border: 20px; }
-  @media (min-width: 992px) {
-    .como_comprar {
-      width: auto; } }
-  .como_comprar b {
+  text-align: center; }
+  .novedades--comprar b {
     color: black;
     background-color: pink;
     padding: 10px 10px 10px 10px; }
-  .como_comprar a {
+  .novedades--comprar a {
     text-decoration: none;
     color: pink; }
 
 .como_comprar_body {
   margin-top: 40px; }
+  .como_comprar_body iframe {
+    width: 100%; }
 
 .pie_pagina {
-  width: 55rem;
-  background-color: #7d3f49; }
-  @media (min-width: 992px) {
-    .pie_pagina {
-      width: 100%; } }
+  width: 100%;
+  background-color: #7d3f49;
+  border: white 3px solid; }
   .pie_pagina .grupo_1 {
-    width: 100%;
-    max-width: 1200px;
     margin: auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 50px;
-    padding: 30px 0px; }
+    padding: 30px 30px; }
     .pie_pagina .grupo_1 .box figure {
-      width: 100%;
       height: 100%;
       justify-content: center;
-      align-items: center; }
+      align-items: center;
+      padding: 10px 10px; }
       .pie_pagina .grupo_1 .box figure img {
         width: 150px; }
     .pie_pagina .grupo_1 .box h2, .pie_pagina .grupo_1 .box .h2 {
-      color: white;
       margin-bottom: 25px;
-      font-size: 20px; }
+      font-size: 20px;
+      font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+      color: white; }
     .pie_pagina .grupo_1 .box p {
       color: #d9bdbd;
       margin-bottom: 10px; }
@@ -8611,11 +8545,15 @@ body {
     color: white; }
     .pie_pagina .grupo_2 small, .pie_pagina .grupo_2 .small {
       font-size: 15px; }
+  @media (min-width: 720px) {
+    .pie_pagina .grupo_1 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 50px;
+      padding: 30px 0px; } }
 
 .fixed {
-  position: fixed;
-  bottom: 20px;
-  right: 20px; }
+  visibility: hidden; }
   @media (min-width: 992px) {
     .fixed {
       position: fixed;
@@ -8623,7 +8561,7 @@ body {
       right: 40px; } }
 
 .subtit {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   font-size: 2rem;
   text-align: center;
   background-color: #7d3f49;
@@ -8634,31 +8572,32 @@ body {
       font-size: 30px;
       border: 4px solid white; } }
 
+.subtit3 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 1.3rem;
+  text-align: center;
+  background-color: #7d3f49;
+  color: white;
+  border: 0.5px solid white; }
+
 /* SECCION CONTACTO */
 .contact {
   background-color: pink; }
   .contact a {
     text-decoration: none;
     color: black;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
     font-size: 20px; }
   .contact img {
     width: 50px;
     height: 50px; }
 
 /* FORMULARIO DE VENTAS MAYORISTAS */
-.controls_form {
-  width: 30rem;
+.form-control {
+  margin: 0.5rem;
   background-color: pink;
-  padding: 10px;
-  margin: 15px;
-  border: 3px solid black; }
-  @media (min-width: 992px) {
-    .controls_form {
-      width: 75%; } }
-  @media (max-width: 992px) {
-    .controls_form {
-      width: 90%; } }
+  border: 3px solid black;
+  width: 80%; }
 
 /* SECCION PRODUCTOS*/
 .main_productos {
@@ -8678,7 +8617,7 @@ body {
 
 /* SECCION NOSOTROS */
 .nosotros_body p {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: black;
   font-size: 25px;
   background-color: pink;
@@ -8687,12 +8626,7 @@ body {
     .nosotros_body p {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-      color: black;
-      font-size: 25px;
-      background-color: pink;
-      text-align: center; }
+      justify-content: center; }
       .nosotros_body p img {
         align-self: center; } }
 
