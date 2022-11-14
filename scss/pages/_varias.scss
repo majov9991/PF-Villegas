@@ -1,9 +1,9 @@
 .subtit {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: $fuente;
     font-size: 2rem;
     text-align: center;
-    background-color: rgb(125, 63, 73);
-    color: white;
+    background-color: map-get($colores , "rojizo" );
+    color: map-get($colores , "blanco" );
     border: 2px solid white;
 
     @media (min-width: 992px) {
@@ -12,15 +12,24 @@
     }
 }
 
+.subtit3 {
+    font-family: $fuente;
+    font-size: 1.3rem;
+    text-align: center;
+    background-color: map-get($colores , "rojizo" );
+    color: map-get($colores , "blanco" );
+    border: 0.5px solid white;
+}
+
 /* SECCION CONTACTO */
 
 .contact {
-    background-color: pink;
+    background-color: map-get($colores , "rosa" );
 
     a {
         text-decoration: none;
-        color: black;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: map-get($colores , "negro" );
+        font-family: $fuente;
         font-size: 20px;
     }
 
@@ -31,21 +40,11 @@
 }
 
 /* FORMULARIO DE VENTAS MAYORISTAS */
-
-.controls_form {
-    width: 30rem;
-    background-color: pink;
-    padding: 10px;
-    margin: 15px;
+.form-control {
+    margin: 0.5rem;
+    background-color: map-get($colores , "rosa" );
     border: 3px solid black;
-
-    @media (min-width: 992px) {
-        width: 75%;
-    }
-
-    @media (max-width: 992px) {
-        width: 90%;
-    }
+    width: 80%;
 }
 
 /* SECCION PRODUCTOS*/
@@ -74,21 +73,16 @@
 
 .nosotros_body {
     p {
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        color: black;
+        font-family: $fuente;
+        color: map-get($colores , "negro" );
         font-size: 25px;
-        background-color: pink;
+        background-color: map-get($colores , "rosa" );
         text-align: center;
 
         @media (max-width: 700px) {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            color: black;
-            font-size: 25px;
-            background-color: pink;
-            text-align: center;
 
             img {
                 align-self: center;
